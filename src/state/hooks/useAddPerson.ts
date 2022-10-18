@@ -7,7 +7,12 @@ export default function useAddPerson() {
 
   return (namePerson: string) => {
     if (list.includes(namePerson)) {
-      return setErrorMessage("Nomes duplicados não são permitidos!");
+      setErrorMessage("Nomes duplicados não são permitidos!");
+
+      setTimeout(() => {
+        setErrorMessage("");
+      }, 3000);
+      return;
     }
     return setList((oldList) => [...oldList, namePerson]);
   };
