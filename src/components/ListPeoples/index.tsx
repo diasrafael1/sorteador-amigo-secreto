@@ -1,14 +1,13 @@
 import useListPeoples from "../../state/hooks/useListPeoples";
+import { List } from "./styles";
 
 export default function ListPeoples() {
   const list = useListPeoples();
   return (
-    <div>
-      <ul>
-        {list.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </div>
+    <List>
+      {list.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </List>
   );
 }

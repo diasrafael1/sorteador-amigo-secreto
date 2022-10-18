@@ -1,18 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import useListPeoples from "../../state/hooks/useListPeoples";
+import Sacolas from "../../assets/sacolas.png";
+import { FooterContainer } from "./styles";
+import { Button } from "../../styles/defaultStyles";
 
 export default function Footer() {
   const listPeoples = useListPeoples();
   const navigate = useNavigate();
 
   return (
-    <footer>
-      <button
+    <FooterContainer>
+      <Button
         disabled={listPeoples.length < 3}
         onClick={() => navigate("/sorteio")}
       >
         Iniciar Brincadeira!
-      </button>
-    </footer>
+      </Button>
+
+      <img src={Sacolas} alt="Imagem de sacolas" />
+    </FooterContainer>
   );
 }

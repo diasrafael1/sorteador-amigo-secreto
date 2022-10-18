@@ -3,7 +3,7 @@
 exports[`a pagina de configuração deve ser renderizada corretamente 1`] = `
 <div>
   <header
-    class="sc-gswNZR eVMNUi"
+    class="sc-eDvSVe bgFaSt"
   >
     <img
       alt="Logo"
@@ -27,25 +27,38 @@ exports[`a pagina de configuração deve ser renderizada corretamente 1`] = `
     <h1>
       Vamos começar!
     </h1>
-    <form>
+    <form
+      class="sc-hLBbgP kURBDR"
+    >
       <input
         placeholder="Insira os nomes do Participantes"
         type="text"
         value=""
       />
       <button
+        class="sc-dkrFOg ceqLqg"
         disabled=""
       >
         Adicionar
       </button>
-      
     </form>
-    <footer>
+    
+    <ul
+      class="sc-jSUZER bAkzxc"
+    />
+    <footer
+      class="sc-gswNZR bnPSAZ"
+    >
       <button
+        class="sc-dkrFOg ceqLqg"
         disabled=""
       >
         Iniciar Brincadeira!
       </button>
+      <img
+        alt="Imagem de sacolas"
+        src="sacolas.png"
+      />
     </footer>
   </section>
 </div>
