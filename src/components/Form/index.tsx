@@ -1,8 +1,10 @@
 import { FormEvent, useRef, useState } from "react";
 import useAddPerson from "../../state/hooks/useAddPerson";
+import useErrorMessage from "../../state/hooks/useErrorMessage";
 
 export default function Form() {
   const addPerson = useAddPerson();
+  const errorMessage = useErrorMessage();
   const [name, setName] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -23,6 +25,7 @@ export default function Form() {
         ref={inputRef}
       />
       <button disabled={!name}>Adicionar</button>
+      {errorMessage && <p role="alert">{errorMessage}</p>}
     </form>
   );
 }
