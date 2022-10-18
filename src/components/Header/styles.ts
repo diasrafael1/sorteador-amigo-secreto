@@ -11,6 +11,7 @@ export const HeaderContainer = styled.header`
   .logoSmall {
     width: 18.6rem;
     height: 15.7rem;
+    margin-bottom: 13%;
   }
   .person {
     position: absolute;

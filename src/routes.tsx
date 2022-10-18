@@ -7,7 +7,7 @@ export default function AppRouter() {
     <BrowserRouter>
       <RecoilRoot>
         <Routes>
-          <Route path="/" element={Home} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </RecoilRoot>
     </BrowserRouter>
