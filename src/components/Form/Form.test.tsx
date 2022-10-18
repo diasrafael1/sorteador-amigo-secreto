@@ -79,4 +79,40 @@ describe("o comportamento do formulário", () => {
       "Nomes duplicados não são permitidos!"
     );
   });
+
+  test("a mensagem de erro deve sumir apos o timer", () => {
+    jest.useFakeTimers();
+    render(
+      <RecoilRoot>
+        <Form />
+      </RecoilRoot>
+    );
+    const input = screen.getByPlaceholderText(
+      "Insira os nomes do Participantes"
+    );
+    const button = screen.getByRole("button");
+    fireEvent.change(input, {
+      target: {
+        value: "Name example",
+      },
+    });
+    fireEvent.click(button);
+    fireEvent.change(input, {
+      target: {
+        value: "Name example",
+      },
+    });
+    fireEvent.click(button);
+
+    let errorMessage = screen.queryByRole("alert"); //é query pois não é obrigatório
+    expect(errorMessage).toBeInTheDocument();
+
+    //esperar que x tempo para a mensagem sumir
+    act(() => {
+      jest.runAllTimers();
+    });
+
+    errorMessage = screen.queryByRole("alert");
+    expect(errorMessage).toBeNull();
+  });
 });
