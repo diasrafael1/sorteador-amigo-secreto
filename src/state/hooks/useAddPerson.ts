@@ -1,8 +1,8 @@
 import { useRecoilState, useSetRecoilState } from "recoil";
-import { errorMessageState, listPeoplesState } from "../atom";
+import { errorMessageState, listPeopleState } from "../atom";
 
 export default function useAddPerson() {
-  const [list, setList] = useRecoilState(listPeoplesState);
+  const [list, setList] = useRecoilState(listPeopleState);
   const setErrorMessage = useSetRecoilState(errorMessageState);
 
   return (namePerson: string) => {

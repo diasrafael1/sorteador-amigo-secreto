@@ -36,7 +36,7 @@ exports[`a pagina de configuração deve ser renderizada corretamente 1`] = `
         value=""
       />
       <button
-        class="sc-dkrFOg ceqLqg"
+        class="sc-dkrFOg kFrzBe"
         disabled=""
       >
         Adicionar
@@ -50,7 +50,7 @@ exports[`a pagina de configuração deve ser renderizada corretamente 1`] = `
       class="sc-gswNZR bnPSAZ"
     >
       <button
-        class="sc-dkrFOg ceqLqg"
+        class="sc-dkrFOg kFrzBe"
         disabled=""
       >
         Iniciar Brincadeira!

@@ -1,8 +1,8 @@
-import useListPeoples from "../../state/hooks/useListPeoples";
+import useListPeople from "../../state/hooks/useListPeople";
 import { List } from "./styles";
 
-export default function ListPeoples() {
-  const list = useListPeoples();
+export default function ListPeople() {
+  const list = useListPeople();
   return (
     <List>
       {list.map((item) => (

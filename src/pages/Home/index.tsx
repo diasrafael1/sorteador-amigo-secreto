@@ -2,7 +2,7 @@ import Card from "../../components/Card";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
 import Header from "../../components/Header";
-import ListPeoples from "../../components/ListPeoples";
+import ListPeople from "../../components/ListPeople";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Card>
         <h1>Vamos começar!</h1>
         <Form />
-        <ListPeoples />
+        <ListPeople />
         <Footer />
       </Card>
     </>

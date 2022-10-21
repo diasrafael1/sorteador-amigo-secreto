@@ -1,11 +1,19 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
 import Footer from ".";
-import useListPeoples from "../../state/hooks/useListPeoples";
+import useListPeople from "../../state/hooks/useListPeople";
 
-jest.mock("../../state/hooks/useListPeoples");
+jest.mock("../../state/hooks/useListPeople");
 
 const mockNavigate = jest.fn();
+const mockRaffle = jest.fn();
+
+jest.mock("../../state/hooks/useRaffler", () => {
+  return {
+    __esModule: true,
+    default: () => mockRaffle,
+  };
+});
 
 jest.mock("react-router-dom", () => {
   return {
@@ -15,7 +23,7 @@ jest.mock("react-router-dom", () => {
 
 describe("quando não existem participantes suficientes", () => {
   beforeEach(() => {
-    (useListPeoples as jest.Mock).mockReturnValue([]);
+    (useListPeople as jest.Mock).mockReturnValue([]);
   });
 
   test("o sorteio não pode ser iniciado", () => {
@@ -32,9 +40,12 @@ describe("quando não existem participantes suficientes", () => {
 });
 
 describe("quando existem participantes suficientes", () => {
-  const participantes = ["Ana", "Catarina", "Matheus"];
   beforeEach(() => {
-    (useListPeoples as jest.Mock).mockReturnValue(participantes);
+    (useListPeople as jest.Mock).mockReturnValue([
+      "Ana",
+      "Catarina",
+      "Matheus",
+    ]);
   });
 
   test("o sorteio pode ser iniciado", () => {
@@ -57,9 +68,10 @@ describe("quando existem participantes suficientes", () => {
     );
 
     const button = screen.getByRole("button");
-
     fireEvent.click(button);
+
     expect(mockNavigate).toHaveBeenCalledTimes(1);
     expect(mockNavigate).toHaveBeenCalledWith("/sorteio");
+    expect(mockRaffle).toHaveBeenCalledTimes(1);
   });
 });

@@ -1,20 +1,20 @@
 import { render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
-import ListPeoples from ".";
-import useListPeoples from "../../state/hooks/useListPeoples";
+import ListPeople from ".";
+import useListPeople from "../../state/hooks/useListPeople";
 
 //como não podemos pegar a lista de fato no Recoil nos testes, simulamos com jest.mock os itens dessa lista
-jest.mock("../../state/hooks/useListPeoples");
+jest.mock("../../state/hooks/useListPeople");
 
 describe("uma lista vázia de partipantes", () => {
   beforeEach(() => {
-    (useListPeoples as jest.Mock).mockReturnValue([]);
+    (useListPeople as jest.Mock).mockReturnValue([]);
   });
 
   test("deve ser renderizada sem elementos", () => {
     render(
       <RecoilRoot>
-        <ListPeoples />
+        <ListPeople />
       </RecoilRoot>
     );
 
@@ -27,13 +27,13 @@ describe("uma lista vázia de partipantes", () => {
 describe("uma lista preenchida de partipantes", () => {
   const participantes = ["Ana", "Catarina"];
   beforeEach(() => {
-    (useListPeoples as jest.Mock).mockReturnValue(participantes);
+    (useListPeople as jest.Mock).mockReturnValue(participantes);
   });
 
   test("deve renderizar os participantes", () => {
     render(
       <RecoilRoot>
-        <ListPeoples />
+        <ListPeople />
       </RecoilRoot>
     );
 
