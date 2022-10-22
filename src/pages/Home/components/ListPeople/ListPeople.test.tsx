@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
 import ListPeople from ".";
-import useListPeople from "../../../../state/hooks/useListPeople";
+import useListPeople from "state/hooks/useListPeople";
 
 //como não podemos pegar a lista de fato no Recoil nos testes, simulamos com jest.mock os itens dessa lista
-jest.mock("../../../../state/hooks/useListPeople");
+jest.mock("state/hooks/useListPeople");
 
 describe("uma lista vázia de partipantes", () => {
   beforeEach(() => {

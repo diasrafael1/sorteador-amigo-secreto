@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Card from "../../components/Card";
+import Card from "components/Card";
 import Form from "./components/Form";
 import { FriendSpan } from "./styles";
-import AirPlane from "../../assets/aviao.png";
+import AirPlane from "assets/aviao.png";
 
 export default function Raffle() {
   const [friend, setFriend] = useState("");

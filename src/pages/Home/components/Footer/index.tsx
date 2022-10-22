@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import useListPeople from "../../../../state/hooks/useListPeople";
-import Sacolas from "../../../../assets/sacolas.png";
+import useListPeople from "state/hooks/useListPeople";
+import Sacolas from "assets/sacolas.png";
 import { FooterContainer } from "./styles";
-import { Button } from "../../../../styles/defaultStyles";
-import useRaffler from "../../../../state/hooks/useRaffler";
-import PlayIcon from "../../../../assets/play-icon.svg";
+import { Button } from "styles/defaultStyles";
+import useRaffler from "state/hooks/useRaffler";
+import PlayIcon from "assets/play-icon.svg";
 
 export default function Footer() {
   const listPeoples = useListPeople();

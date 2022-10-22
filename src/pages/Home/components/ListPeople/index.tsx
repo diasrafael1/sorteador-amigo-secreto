@@ -1,4 +1,4 @@
-import useListPeople from "../../../../state/hooks/useListPeople";
+import useListPeople from "state/hooks/useListPeople";
 import { List } from "./styles";
 
 export default function ListPeople() {

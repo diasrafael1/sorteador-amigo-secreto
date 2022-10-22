@@ -1,6 +1,6 @@
-import LogoSmall from "../../assets/logo-pequeno.png";
-import Logo from "../../assets/logo.png";
-import Person from "../../assets/participante.png";
+import LogoSmall from "assets/logo-pequeno.png";
+import Logo from "assets/logo.png";
+import Person from "assets/participante.png";
 
 import { HeaderContainer } from "./styles";
 

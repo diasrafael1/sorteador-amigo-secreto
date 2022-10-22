@@ -1,12 +1,12 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
 import Raffle from ".";
-import useListPeople from "../../state/hooks/useListPeople";
-import useResultRaffle from "../../state/hooks/useResultRaffle";
+import useListPeople from "state/hooks/useListPeople";
+import useResultRaffle from "state/hooks/useResultRaffle";
 
-jest.mock("../../state/hooks/useListPeople");
+jest.mock("state/hooks/useListPeople");
 
-jest.mock("../../state/hooks/useResultRaffle");
+jest.mock("state/hooks/useResultRaffle");
 
 describe("na pagina de sorteio", () => {
   const participantes = ["Ana", "Catarina", "Matheus"];
@@ -30,7 +30,7 @@ describe("na pagina de sorteio", () => {
 
     const options = screen.queryAllByRole("option");
 
-    expect(options).toHaveLength(participantes.length + 1);
+    expect(options).toHaveLength(participantes.length + 1); // +1 pois já vem uma option "Selecione seu nome".
   });
 
   test("o amigo secreto é exibido quando solicitado", () => {

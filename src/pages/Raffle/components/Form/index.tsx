@@ -1,9 +1,9 @@
-import useResultRaffle from "../../../../state/hooks/useResultRaffle";
-import useListPeople from "../../../../state/hooks/useListPeople";
+import useResultRaffle from "state/hooks/useResultRaffle";
+import useListPeople from "state/hooks/useListPeople";
 import { FormEvent, useState } from "react";
 import { FormContainer } from "./styles";
-import { Button } from "../../../../styles/defaultStyles";
-import DadoIcon from "../../../../assets/dado-icon.svg";
+import { Button } from "styles/defaultStyles";
+import DadoIcon from "assets/dado-icon.svg";
 
 interface Props {
   setFriend: React.Dispatch<React.SetStateAction<string>>;
