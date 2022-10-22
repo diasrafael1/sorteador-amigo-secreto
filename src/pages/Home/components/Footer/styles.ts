@@ -6,8 +6,15 @@ export const FooterContainer = styled.footer`
   align-items: center;
 
   button {
-    width: 15.5rem;
+    width: 20.5rem;
     height: 6.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    img {
+      width: 3rem;
+    }
   }
 
   img {

@@ -12,8 +12,13 @@ export const CardContainer = styled.section`
 
   h1 {
     font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 2rem;
+    line-height: 3rem;
     color: rgba(75, 105, 253, 0.99);
+
+    @media (min-width: 1024px) {
+      font-size: 3.2rem;
+      line-height: 4.8rem;
+    }
   }
 `;

@@ -1,14 +1,14 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
 import Footer from ".";
-import useListPeople from "../../state/hooks/useListPeople";
+import useListPeople from "../../../../state/hooks/useListPeople";
 
-jest.mock("../../state/hooks/useListPeople");
+jest.mock("../../../../state/hooks/useListPeople");
 
 const mockNavigate = jest.fn();
 const mockRaffle = jest.fn();
 
-jest.mock("../../state/hooks/useRaffler", () => {
+jest.mock("../../../../state/hooks/useRaffler", () => {
   return {
     __esModule: true,
     default: () => mockRaffle,

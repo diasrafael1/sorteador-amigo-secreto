@@ -1,7 +1,7 @@
 import { FormEvent, useRef, useState } from "react";
-import useAddPerson from "../../state/hooks/useAddPerson";
-import useErrorMessage from "../../state/hooks/useErrorMessage";
-import { Button } from "../../styles/defaultStyles";
+import useAddPerson from "../../../../state/hooks/useAddPerson";
+import useErrorMessage from "../../../../state/hooks/useErrorMessage";
+import { Button } from "../../../../styles/defaultStyles";
 import { FormContainer } from "./styles";
 
 export default function Form() {

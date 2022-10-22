@@ -14,6 +14,12 @@ export const Button = styled.button`
   line-height: 24px;
   color: #ffffff;
 
+  @media (min-width: 1024px) {
+    :hover {
+      background: rgba(75, 105, 253, 0.99);
+    }
+  }
+
   :disabled {
     background: #c4c4c4;
     color: #444444;
