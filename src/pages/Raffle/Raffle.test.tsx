@@ -6,11 +6,7 @@ import useResultRaffle from "../../state/hooks/useResultRaffle";
 
 jest.mock("../../state/hooks/useListPeople");
 
-jest.mock("../../state/hooks/useResultRaffle",()=>{
-  return{
-    useResultRaffle:
-  }
-});
+jest.mock("../../state/hooks/useResultRaffle");
 
 describe("na pagina de sorteio", () => {
   const participantes = ["Ana", "Catarina", "Matheus"];

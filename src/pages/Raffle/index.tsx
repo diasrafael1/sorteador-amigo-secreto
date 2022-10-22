@@ -12,7 +12,7 @@ export default function Raffle() {
 
   function handleRaffle(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setFriend(result.get("person") as string);
+    setFriend(result.get(person) as string);
   }
 
   return (
@@ -33,7 +33,7 @@ export default function Raffle() {
               <option key={person}>{person}</option>
             ))}
           </select>
-          <button>Sortear</button>
+          <button type="submit">Sortear</button>
         </form>
         {friend && <p role="alert">{friend}</p>}
       </Card>
