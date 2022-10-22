@@ -13,7 +13,7 @@ import Raffle from "./pages/Raffle";
 
 function ProtectedRoutes({ redirectTo }: { redirectTo: string }) {
   const listPeople = useListPeople();
-  console.log(listPeople);
+
   return listPeople.length !== 0 ? <Outlet /> : <Navigate to={redirectTo} />;
 }
 
@@ -26,6 +26,7 @@ export default function AppRouter() {
           <Route path="/" element={<Home />} />
           <Route element={<ProtectedRoutes redirectTo={"/"} />}>
             <Route path="/sorteio" element={<Raffle />} />
+            <Route path="*" />
           </Route>
         </Routes>
       </RecoilRoot>
