@@ -2,27 +2,8 @@
 
 exports[`a pagina de configuração deve ser renderizada corretamente 1`] = `
 <div>
-  <header
-    class="sc-eDvSVe bgFaSt"
-  >
-    <img
-      alt="Logo"
-      class="logoSmall"
-      src="logo-pequeno.png"
-    />
-    <img
-      alt="Logo"
-      class="logo"
-      src="logo.png"
-    />
-    <img
-      alt="Pessoa"
-      class="person"
-      src="participante.png"
-    />
-  </header>
   <section
-    class="sc-bcXHqe kaIdmH"
+    class="sc-bcXHqe bVtdQ"
   >
     <h1>
       Vamos começar!
@@ -36,7 +17,7 @@ exports[`a pagina de configuração deve ser renderizada corretamente 1`] = `
         value=""
       />
       <button
-        class="sc-dkrFOg kFrzBe"
+        class="sc-dkrFOg hIjcYn"
         disabled=""
       >
         Adicionar
@@ -44,15 +25,19 @@ exports[`a pagina de configuração deve ser renderizada corretamente 1`] = `
     </form>
     
     <ul
-      class="sc-jSUZER bAkzxc"
+      class="sc-eDvSVe egWmAa"
     />
     <footer
-      class="sc-gswNZR bnPSAZ"
+      class="sc-gswNZR eILkMd"
     >
       <button
-        class="sc-dkrFOg kFrzBe"
+        class="sc-dkrFOg hIjcYn"
         disabled=""
       >
+        <img
+          alt="Icone de Iniciar"
+          src="play-icon.svg"
+        />
         Iniciar Brincadeira!
       </button>
       <img
