@@ -17,6 +17,10 @@ export default function Form({ setFriend }: Props) {
   function handleRaffle(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setFriend(result.get(person) as string);
+
+    setTimeout(() => {
+      setFriend("");
+    }, 3000);
   }
 
   return (

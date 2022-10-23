@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { act, fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
 import Raffle from ".";
 import useListPeople from "state/hooks/useListPeople";
@@ -52,5 +52,36 @@ describe("na pagina de sorteio", () => {
 
     const friend = screen.getByRole("alert");
     expect(friend).toBeInTheDocument();
+  });
+
+  test("o amigo secreto deve sumir depois de n tempo", () => {
+    jest.useFakeTimers();
+
+    render(
+      <RecoilRoot>
+        <Raffle />
+      </RecoilRoot>
+    );
+
+    const select = screen.getByPlaceholderText("Selecione o seu nome");
+    fireEvent.change(select, {
+      target: {
+        value: participantes[0],
+      },
+    });
+
+    const button = screen.getByRole("button");
+    fireEvent.click(button);
+
+    let friend = screen.queryByRole("alert");
+    expect(friend).toBeInTheDocument();
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
+    friend = screen.queryByRole("alert");
+
+    expect(friend).toBeNull();
   });
 });
